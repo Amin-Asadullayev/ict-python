@@ -34,6 +34,6 @@ result = binary_search(massiv, x)
 if massiv[result]==x:
     print(f"{x} ededi tapildi")
 else:
-    dgr = result - (1 if massiv[result]>x else -1)
+    dgr = (result - (1 if massiv[result]>x else -1))%len(massiv)
     print(f"{x} ededi tapilmadi. En yaxin eded: {massiv[result] if abs(massiv[result]-x)<abs(massiv[dgr]-x) else massiv[dgr]}")
         
